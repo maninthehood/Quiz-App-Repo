@@ -23,30 +23,6 @@ export default function App() {
   };
   return (
     <main className="app">
-      {showScore ? (
-        <div className="score-section">
-          You scored {score} out of {questions.length}
-          <button onClick={location.reload()}>Restart</button>
-        </div>
-      ) : (
-        <div className="question-section">
-          <div className="question-count">
-            Question: {currentQuestion}/ {questions.length}
-          </div>
-          <div className="question-text">
-            {questions[currentQuestion].questionText}
-          </div>
-          <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button
-                onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
-              >
-                {answerOption.answerText}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
     </main>
   );
 }
