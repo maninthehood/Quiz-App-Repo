@@ -23,6 +23,16 @@ export default function App() {
   };
   return (
     <main className="app">
+      {showScore ? (
+        <div className="score-section">
+            You scored {score} out of {questions.length}
+        </div>
+      ) : (
+        <div className="question-count">
+            Question: {currentQuestion}/{questions.length}
+        </div>
+        
+      ) }
     </main>
   );
 }
